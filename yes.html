@@ -2,23 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>YAYYYYY 💖</title>
+  <title>YAY 💘</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <div class="card">
-    <img 
-      src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" 
+    <img
+      src="PASTE_YOUR_CAT_GIF_HERE"
       class="cat"
     />
 
     <h1>YAYYY 😭💖</h1>
     <p class="question">
-      See you on the 14th,<br />
-      my prince 👑💘
+      Screenshot this & send it to me &lt;3
     </p>
   </div>
+
+  <!-- Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    // Phone vibration + immediate confetti
+    if (navigator.vibrate) {
+      navigator.vibrate([200, 100, 200, 100, 300]);
+    }
+
+    const end = Date.now() + 4000;
+    (function frame() {
+      confetti({
+        particleCount: 10,
+        spread: 160,
+        origin: { x: Math.random(), y: Math.random() * 0.4 }
+      });
+      if (Date.now() < end) requestAnimationFrame(frame);
+    })();
+  </script>
 
 </body>
 </html>

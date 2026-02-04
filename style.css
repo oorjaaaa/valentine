@@ -2,13 +2,8 @@ body {
   height: 100vh;
   margin: 0;
   font-family: 'Comic Sans MS', 'Poppins', cursive;
-  background: repeating-linear-gradient(
-    45deg,
-    #ffe6f0,
-    #ffe6f0 20px,
-    #fff 20px,
-    #fff 40px
-  );
+  background-color: #ffe6f0;
+  background-image: url("https://www.transparenttextures.com/patterns/paw-print.png");
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,59 +11,81 @@ body {
 
 .card {
   background: #fff;
-  padding: 30px;
+  padding: 24px;
   border-radius: 20px;
   text-align: center;
-  width: 320px;
+  width: 90%;
+  max-width: 350px;
   box-shadow: 0 15px 30px rgba(0,0,0,0.2);
   position: relative;
 }
 
 .cat {
-  width: 180px;
+  width: 150px;
   border-radius: 15px;
   margin-bottom: 15px;
 }
 
 h1 {
+  font-size: 20px;
   color: #ff4d88;
-  margin: 10px 0;
 }
 
 .question {
-  font-size: 20px;
+  font-size: 18px;
   color: #cc0066;
-  margin-bottom: 25px;
+  margin-top: 15px;
 }
 
 .buttons {
   position: relative;
-  height: 60px;
+  height: 90px;
+  margin-top: 25px;
 }
 
 button {
-  padding: 10px 18px;
+  padding: 12px 18px;
   font-size: 16px;
-  border-radius: 12px;
+  border-radius: 14px;
   border: none;
-  cursor: pointer;
 }
 
 .yes {
   background: #ff4d88;
   color: white;
-  margin-right: 15px;
 }
 
 .no {
   background: #ccc;
   color: #333;
   position: absolute;
+  right: 0;
+  top: 0;
+  transition: transform 0.3s ease;
 }
 
 #tooltip {
   display: none;
-  margin-top: 15px;
+  margin-top: 12px;
   font-size: 14px;
   color: #ff0066;
+}
+
+/* Floating hearts (SECOND PAGE ONLY via JS) */
+.heart {
+  position: fixed;
+  font-size: 22px;
+  animation: heartBurst 3s linear forwards;
+  pointer-events: none;
+}
+
+@keyframes heartBurst {
+  from {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-120vh) scale(1.6);
+    opacity: 0;
+  }
 }

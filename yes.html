@@ -9,30 +9,37 @@
 
   <div class="card">
     <img
-      src="PASTE_YOUR_CAT_GIF_HERE"
+      src="https://i.pinimg.com/736x/26/95/58/2695589f583560aca935627870e713b6.jpg"
       class="cat"
     />
 
-    <h1>YAYYY 😭💖</h1>
-    <p class="question">
-      Screenshot this & send it to me &lt;3
+    <h1>yayy, I love you so much!! 💖</h1>
+    <p class="small-text">
+      not like u really had an option anyway
     </p>
   </div>
 
   <!-- Confetti -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script>
-    // Phone vibration + immediate confetti
+    // EXTRA STRONG vibration 💥💥💥
     if (navigator.vibrate) {
-      navigator.vibrate([200, 100, 200, 100, 300]);
+      navigator.vibrate([
+        300,100,300,100,300,
+        100,400,100,400
+      ]);
     }
 
-    const end = Date.now() + 4000;
+    const end = Date.now() + 5000;
     (function frame() {
       confetti({
-        particleCount: 10,
-        spread: 160,
-        origin: { x: Math.random(), y: Math.random() * 0.4 }
+        particleCount: 15,
+        spread: 180,
+        startVelocity: 45,
+        origin: {
+          x: Math.random(),
+          y: Math.random() * 0.4
+        }
       });
       if (Date.now() < end) requestAnimationFrame(frame);
     })();
